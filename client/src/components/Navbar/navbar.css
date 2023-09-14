@@ -1,0 +1,114 @@
+@import url("../../index.css");
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    border-bottom: 3px solid var(--font-color-secondary);
+}
+
+.nav__logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav__logo__img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+}
+
+.nav__list li {
+    margin-left: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav__list li:hover {
+    color: var(--secondary-color);
+}
+
+.nav__hamburger {
+    display: none;
+}
+
+.nav__hamburger__content--inactive {
+    display: none;
+}
+
+@media (max-width: 550px) {
+    .nav__list {
+        display: none;
+    }
+
+    .nav__hamburger {
+        display: block;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        right: 30px;
+    }
+
+    .nav__hamburger__line {
+        width: 25px;
+        height: 3px;
+        background-color: var(--font-color);
+        margin: 5px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .nav__hamburger__line--active-1 {
+        transform: rotate(45deg) translateY(11px);
+    }
+    
+    .nav__hamburger__line--active-3 {
+        transform: rotate(-45deg) translateY(-11px);
+    }
+    
+    .nav__hamburger__line--active-2 {
+        opacity: 0;
+    }
+
+    .nav__hamburger__content--inactive {
+        display: block;
+    }
+
+    .nav__hamburger__content--inactive,
+    .nav__hamburger__content--active {
+        z-index: 9;
+        position: absolute;
+        top: 20;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        transition: transform 0.4s ease-in-out;
+        overflow-y: hidden;
+        transform: translateX(-100%);
+        background-color: var(--font-color-secondary);
+        opacity: 0.9;
+    }
+
+    .nav__hamburger__content--active {
+        transform: translateX(0);
+    }
+
+    .nav__hamburger__content--inactive li,
+    .nav__hamburger__content--active li {
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+        color: var(--secondary-color);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .nav__hamburger__content--inactive li:hover,
+    .nav__hamburger__content--active li:hover {
+        color: var(--font-color);
+    }
+}

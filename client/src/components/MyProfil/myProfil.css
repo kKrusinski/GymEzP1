@@ -1,0 +1,47 @@
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+}
+
+header h1 {
+    color: var(--secondary-color);
+}
+
+main p {
+    color: var(--font-color-secondary);
+}
+
+main span {
+    color: var(--secondary-color);
+}
+
+main button {
+    width: 40%;
+    height: 25px;
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    color: black;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+main div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.delete {
+    position: absolute;
+    bottom: 20px;
+    max-width: 200px;
+}

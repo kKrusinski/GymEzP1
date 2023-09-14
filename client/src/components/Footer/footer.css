@@ -1,0 +1,14 @@
+.footer {
+    height: 150px;
+    background-image: linear-gradient(to bottom, var(--primary-color), var(--font-color-secondary));
+    border-top: 3px solid var(--font-color-secondary);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0 30px;
+}
+
+.footer p {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
